@@ -42,7 +42,7 @@ class AuthorService
         $author = $this->details($id);
         $books = $author->books;
 
-        foreach($book as $books){
+        foreach($books as $book){
             $this->bookService->update($book->id, ["author_id"=> null]);
         }
 

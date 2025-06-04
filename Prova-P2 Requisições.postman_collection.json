@@ -381,7 +381,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"rating\": 3,\r\n    \"text\": \"bfdgbfdsbbfs\",\r\n    \"user_id\": 1,\r\n    \"book_id\": 1\r\n}",
+							"raw": "{\r\n    \"rating\": 3,\r\n    \"text\": \" mh mjgh\",\r\n    \"user_id\": 1,\r\n    \"book_id\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -768,13 +768,13 @@
 					"response": []
 				},
 				{
-					"name": "Atualizar User Copy",
+					"name": "Atualizar Author",
 					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"AllanShima Atualizado!\",\r\n    \"date_of_birth\": \"1990-05-15\",\r\n    \"biography\": \"gbfdsbdsbfgdsbfdsbsdbd\"\r\n}",
+							"raw": "{\r\n    \"name\": \"AllanShima Atualizado!\",\r\n    \"date_of_birth\": \"1990-05-15\",\r\n    \"biography\": \"gbfdsbdsbfgdsbfdsbsdbd atualizado!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
