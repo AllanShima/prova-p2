@@ -10,9 +10,10 @@ class BookService
     private BookRepository $bookRepository;
     private ReviewService $reviewService;
 
-    public function __construct(BookRepository $bookRepository)
+    public function __construct(BookRepository $bookRepository, ReviewService $reviewService)
     {
         $this->bookRepository = $bookRepository;
+        $this->reviewService = $reviewService;
     }
 
     public function get()
@@ -38,14 +39,7 @@ class BookService
 
     public function delete($id)
     {
-        $book = $this->details($id);
-        $reviews = $book->reviews;
-
-        foreach($reviews as $review){
-            $this->reviewService->update($review->id, ["book_id"=> null]);
-        }
-
-        return $this->bookRepository->delete($id);
+        return $this->bookRepository->delete($id); // O método Eloquent cuida do resto pra apagar (Comportamento 2)
     }
 
     public function findReviews(int $id){

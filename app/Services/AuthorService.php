@@ -39,14 +39,7 @@ class AuthorService
 
     public function delete($id)
     {
-        $author = $this->details($id);
-        $books = $author->books;
-
-        foreach($books as $book){
-            $this->bookService->update($book->id, ["author_id"=> null]);
-        }
-
-        return $this->authorRepository->delete($id);
+        return $this->authorRepository->delete($id); // O método Eloquent cuida do resto pra apagar (Comportamento 5)
     }
 
     public function findBooks(int $id){

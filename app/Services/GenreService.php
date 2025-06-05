@@ -43,7 +43,7 @@ class GenreService
         $books = $genre->books;
 
         foreach($books as $book){
-            $this->bookService->update($book->id, ["genre_id"=> null]);
+            $this->bookService->update($book->id, ["genre_id"=> null]); // Será feito somente o desveínculo
         }
 
         return $this->genreRepository->delete($id);

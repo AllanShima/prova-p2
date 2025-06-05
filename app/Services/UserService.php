@@ -39,14 +39,7 @@ class UserService
 
     public function delete($id)
     {
-        $user = $this->details($id);
-        $reviews = $user->reviews;
-
-        foreach($reviews as $review){
-            $this->reviewService->update($review->id, ["user_id"=> null]);
-        }
-
-        return $this->userRepository->delete($id);
+        return $this->userRepository->delete($id); // O método Eloquent cuida do resto pra apagar (Comportamento 2)
     }
 
     public function findReview(int $id){
